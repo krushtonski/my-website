@@ -174,8 +174,9 @@ button, input, textarea { font-family: inherit; font-size: inherit; }
   gap: 32px;
 }
 
-.hero-vertical-name {
-  display: none;
+.hero-name {
+  font-size: 2rem;
+  letter-spacing: -0.01em;
 }
 
 .hero-image-wrap {
@@ -508,17 +509,8 @@ button, input, textarea { font-family: inherit; font-size: inherit; }
     display: none;
   }
 
-  .hero-vertical-name {
-    display: block;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 2.5rem;
-    letter-spacing: 0.02em;
-    color: var(--ink);
-    border-right: 1px solid rgba(1, 22, 39, 0.15);
-    padding-right: 20px;
+  .hero-name {
+    font-size: 2.75rem;
   }
 
   .hero-layout {
