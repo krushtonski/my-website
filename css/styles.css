@@ -216,7 +216,7 @@ button, input, textarea { font-family: inherit; font-size: inherit; }
   font-size: 0.9rem;
 }
 
-.hero-location svg { flex-shrink: 0; }
+.hero-location svg { flex-shrink: 0; color: var(--rose); }
 
 .hero-bio {
   max-width: 560px;
