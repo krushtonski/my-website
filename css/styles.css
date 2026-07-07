@@ -430,6 +430,14 @@ button, input, textarea { font-family: inherit; font-size: inherit; }
 
 .btn-submit:hover { opacity: 0.88; }
 
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
 .form-status {
   font-size: 0.9rem;
   color: var(--grey);
