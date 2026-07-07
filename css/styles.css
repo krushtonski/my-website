@@ -538,12 +538,24 @@ button, input, textarea { font-family: inherit; font-size: inherit; }
 .contact-item svg { color: var(--rose); flex-shrink: 0; }
 
 .contact-form {
-  background: var(--snow);
+  background: var(--white);
   border-radius: 12px;
   padding: 32px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  box-shadow: 0 12px 32px rgba(1, 22, 39, 0.08);
+  border: 1px solid rgba(1, 22, 39, 0.06);
+}
+
+.contact-form-header h3 {
+  font-size: 1.25rem;
+  margin-bottom: 6px;
+}
+
+.contact-form-header p {
+  color: var(--grey);
+  font-size: 0.9rem;
 }
 
 .form-row {
@@ -568,7 +580,7 @@ button, input, textarea { font-family: inherit; font-size: inherit; }
   border: 1px solid rgba(1, 22, 39, 0.15);
   border-radius: 8px;
   padding: 12px 14px;
-  background: var(--white);
+  background: var(--snow);
   color: var(--ink);
   min-height: 44px;
   resize: vertical;
