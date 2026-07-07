@@ -279,27 +279,88 @@ button, input, textarea { font-family: inherit; font-size: inherit; }
   font-size: 1.875rem;
 }
 
-.view-all {
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: var(--rose);
-  border-bottom: 1px solid var(--rose);
-  padding-bottom: 2px;
-  white-space: nowrap;
+.carousel-nav {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
 }
 
-.view-all:hover { opacity: 0.75; }
+.carousel-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(1, 22, 39, 0.15);
+  background: var(--white);
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
 
-/* ---------- Work grid ---------- */
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
+.carousel-btn:hover,
+.carousel-btn:focus-visible {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--white);
+}
+
+/* ---------- Work carousel ---------- */
+.carousel-track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 4px;
+  scrollbar-width: none;
+}
+
+.carousel-track::-webkit-scrollbar { display: none; }
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(1, 22, 39, 0.15);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-dot.active {
+  background: var(--rose);
+  transform: scale(1.35);
 }
 
 .card {
   display: flex;
   flex-direction: column;
+  flex: 0 0 auto;
+  width: 82%;
+  scroll-snap-align: start;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--rose);
+  outline-offset: 6px;
 }
 
 .card-image {
@@ -332,6 +393,118 @@ button, input, textarea { font-family: inherit; font-size: inherit; }
 .card-desc {
   color: var(--grey);
   font-size: 0.95rem;
+}
+
+/* ---------- Case study modal ---------- */
+.case-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  border: none;
+  padding: 0;
+  border-radius: 16px;
+  width: 92vw;
+  max-width: 640px;
+  max-height: 88vh;
+  background: var(--white);
+  box-shadow: 0 24px 60px rgba(1, 22, 39, 0.25);
+}
+
+.case-modal::backdrop {
+  background: rgba(1, 22, 39, 0.6);
+}
+
+.case-modal-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-height: 88vh;
+}
+
+.case-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1px solid rgba(1, 22, 39, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.case-modal-close:hover { background: var(--snow); }
+
+.case-modal-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--snow);
+  flex-shrink: 0;
+}
+
+.case-modal-body {
+  padding: 28px 32px 32px;
+  overflow-y: auto;
+}
+
+.case-modal-title {
+  font-size: 1.4rem;
+  margin: 8px 0 20px;
+}
+
+.case-modal-meta {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+
+.case-modal-meta dt {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--grey);
+  margin-bottom: 4px;
+}
+
+.case-modal-meta dd { font-weight: 600; }
+
+.case-modal-section { margin-bottom: 18px; }
+
+.case-modal-section h4 {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.case-modal-section p {
+  color: var(--ink);
+  font-size: 0.95rem;
+}
+
+.case-modal-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin-top: 8px;
+}
+
+.case-modal-skills li {
+  background: var(--snow);
+  color: var(--ink);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 999px;
 }
 
 /* ---------- Contact ---------- */
@@ -495,8 +668,8 @@ button, input, textarea { font-family: inherit; font-size: inherit; }
     height: 220px;
   }
 
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
+  .card {
+    width: 46%;
   }
 
   .form-row {
@@ -533,8 +706,8 @@ button, input, textarea { font-family: inherit; font-size: inherit; }
 
   .hero-role { font-size: 2rem; }
 
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
+  .card {
+    width: 31%;
   }
 
   .contact-wrapper {

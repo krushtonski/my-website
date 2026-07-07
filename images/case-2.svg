@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#011627"/>
+  <g opacity="0.9">
+    <rect x="185" y="60" width="30" height="80" rx="8" transform="rotate(0 200 100)" fill="#f6f7f8" opacity="0.15"/>
+    <rect x="185" y="60" width="30" height="80" rx="8" transform="rotate(45 200 150)" fill="#f6f7f8" opacity="0.15"/>
+    <rect x="185" y="60" width="30" height="80" rx="8" transform="rotate(90 200 150)" fill="#f6f7f8" opacity="0.15"/>
+    <rect x="185" y="60" width="30" height="80" rx="8" transform="rotate(135 200 150)" fill="#f6f7f8" opacity="0.15"/>
+    <rect x="185" y="60" width="30" height="80" rx="8" transform="rotate(180 200 150)" fill="#f6f7f8" opacity="0.15"/>
+    <rect x="185" y="60" width="30" height="80" rx="8" transform="rotate(225 200 150)" fill="#f6f7f8" opacity="0.15"/>
+    <rect x="185" y="60" width="30" height="80" rx="8" transform="rotate(270 200 150)" fill="#f6f7f8" opacity="0.15"/>
+    <rect x="185" y="60" width="30" height="80" rx="8" transform="rotate(315 200 150)" fill="#f6f7f8" opacity="0.15"/>
+  </g>
+  <circle cx="200" cy="150" r="46" fill="#e36588"/>
+</svg>

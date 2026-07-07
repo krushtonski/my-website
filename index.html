@@ -93,36 +93,51 @@
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Featured Work</h2>
-        <a href="#" class="view-all">View All</a>
+        <div class="carousel-nav">
+          <button type="button" class="carousel-btn" id="carousel-prev" aria-label="Previous case study">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"></path></svg>
+          </button>
+          <button type="button" class="carousel-btn" id="carousel-next" aria-label="Next case study">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"></path></svg>
+          </button>
+        </div>
       </div>
-      <div class="grid">
-        <article class="card">
-          <img src="images/project-1.svg" alt="Unified Component Library project thumbnail" class="card-image">
-          <div class="card-content">
-            <span class="card-tag">Design System</span>
-            <h3 class="card-title">Unified Component Library</h3>
-            <p class="card-desc">Built a scalable design system serving 50+ product teams with consistent patterns and reusable components.</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="images/project-2.svg" alt="Wellness Tracking Platform project thumbnail" class="card-image">
-          <div class="card-content">
-            <span class="card-tag">Mobile App</span>
-            <h3 class="card-title">Wellness Tracking Platform</h3>
-            <p class="card-desc">Designed and developed a cross-platform mobile experience that helps users maintain healthy habits.</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="images/project-3.svg" alt="Sustainable Fashion Marketplace project thumbnail" class="card-image">
-          <div class="card-content">
-            <span class="card-tag">E-Commerce</span>
-            <h3 class="card-title">Sustainable Fashion Marketplace</h3>
-            <p class="card-desc">Created a seamless shopping experience for eco-conscious consumers with integrated sustainability metrics.</p>
-          </div>
-        </article>
-      </div>
+
+      <div class="carousel-track" id="carousel-track" role="list"></div>
+
+      <div class="carousel-dots" id="carousel-dots"></div>
     </div>
   </section>
+
+  <dialog class="case-modal" id="case-modal">
+    <div class="case-modal-inner">
+      <button type="button" class="case-modal-close" id="case-modal-close" aria-label="Close case study">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18"></path><path d="M6 6l12 12"></path></svg>
+      </button>
+      <img alt="" class="case-modal-image" id="case-modal-image">
+      <div class="case-modal-body">
+        <span class="card-tag" id="case-modal-tag"></span>
+        <h3 class="case-modal-title" id="case-modal-title"></h3>
+        <dl class="case-modal-meta">
+          <div><dt>Role</dt><dd id="case-modal-role"></dd></div>
+          <div><dt>Timeline</dt><dd id="case-modal-timeline"></dd></div>
+        </dl>
+        <div class="case-modal-section">
+          <h4>Challenge</h4>
+          <p id="case-modal-challenge"></p>
+        </div>
+        <div class="case-modal-section">
+          <h4>Approach</h4>
+          <p id="case-modal-approach"></p>
+        </div>
+        <div class="case-modal-section">
+          <h4>Outcome</h4>
+          <p id="case-modal-outcome"></p>
+        </div>
+        <ul class="case-modal-skills" id="case-modal-skills"></ul>
+      </div>
+    </div>
+  </dialog>
 
   <section id="contact" class="section contact-section">
     <div class="container contact-wrapper">
