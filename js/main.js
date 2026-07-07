@@ -14,6 +14,24 @@ navLinks.querySelectorAll('a').forEach((link) => {
   });
 });
 
+// Scroll-triggered entrance animation (plays once; elements are fully
+// visible by default regardless of whether this runs)
+const animateTargets = document.querySelectorAll('.js-animate-in');
+if (animateTargets.length && 'IntersectionObserver' in window) {
+  const animateObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          animateObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.4 }
+  );
+  animateTargets.forEach((el) => animateObserver.observe(el));
+}
+
 // Featured work carousel + case study modal
 const caseStudies = [
   {

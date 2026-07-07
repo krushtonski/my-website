@@ -232,6 +232,22 @@ button, input, textarea { font-family: inherit; font-size: inherit; }
   .marquee-track { animation: none; }
 }
 
+/* ---------- Scroll-triggered entrance animation ---------- */
+/* No base opacity/transform here on purpose: if JS never runs, the
+   element renders normally and is always fully visible. */
+@keyframes fade-slide-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.js-animate-in.in-view {
+  animation: fade-slide-up 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js-animate-in.in-view { animation: none; }
+}
+
 /* ---------- Sections ---------- */
 .section { padding: 88px 0; }
 
