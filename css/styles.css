@@ -106,38 +106,6 @@ button, input, textarea { font-family: inherit; font-size: inherit; }
   gap: 20px;
 }
 
-.social-icons {
-  display: none;
-  align-items: center;
-  gap: 16px;
-}
-
-.social-icons a {
-  width: 20px;
-  height: 20px;
-  color: var(--ink);
-  transition: color 0.2s ease;
-}
-
-.social-icons a:hover,
-.social-icons a:focus-visible {
-  color: var(--rose);
-}
-
-.social-icons svg { width: 100%; height: 100%; }
-
-.social-icons img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transition: opacity 0.2s ease;
-}
-
-.social-icons a:hover img,
-.social-icons a:focus-visible img {
-  opacity: 0.7;
-}
-
 .mobile-menu-btn {
   display: flex;
   align-items: center;
@@ -658,13 +626,55 @@ button, input, textarea { font-family: inherit; font-size: inherit; }
 
 .footer-nav a:hover { color: var(--rose); }
 
-.footer-content .social-icons {
-  display: flex;
-}
-
 .copyright {
   font-size: 0.85rem;
   color: var(--grey);
+}
+
+/* ---------- Floating social icons ---------- */
+.floating-social {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 40;
+}
+
+.floating-social a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1px solid rgba(1, 22, 39, 0.12);
+  box-shadow: 0 6px 18px rgba(1, 22, 39, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  transition: color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.floating-social a:hover,
+.floating-social a:focus-visible {
+  color: var(--rose);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(1, 22, 39, 0.2);
+}
+
+.floating-social svg { width: 18px; height: 18px; }
+
+.floating-social img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  transition: opacity 0.2s ease;
+}
+
+.floating-social a:hover img,
+.floating-social a:focus-visible img {
+  opacity: 0.7;
 }
 
 /* ---------- Tablet ---------- */
@@ -692,10 +702,6 @@ button, input, textarea { font-family: inherit; font-size: inherit; }
 /* ---------- Desktop ---------- */
 @media (min-width: 1024px) {
   .nav-links {
-    display: flex;
-  }
-
-  .social-icons {
     display: flex;
   }
 
