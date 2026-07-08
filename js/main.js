@@ -86,6 +86,30 @@ const caseStudies = [
     skills: ['Community Strategy', 'Community Management', 'Project Management'],
   },
   {
+    tag: 'Design Research',
+    title: 'Design Researcher for OpenIDEO (part of IDEO)',
+    summary: "Scouted and developed startups and entrepreneurs for OpenIDEO's global innovation challenges, helping shape three of the top five Bridge Builder Challenge winners.",
+    sections: [
+      {
+        heading: 'Participant Recruitment & Development',
+        body: "As a Design Researcher for OpenIDEO (IDEO's social impact challenges division), I was involved in the end-to-end participant journey for their global open innovation challenges. I scouted and recruited startups, entrepreneurs, and students to share their ideas for the challenges, then helped them develop and refine their solutions using design thinking through the challenge platform and via virtual and in-person workshops.",
+      },
+      {
+        heading: 'Client Collaboration & Judging',
+        body: 'On the client side, I shared data-driven progress updates, facilitated ideation sessions, and helped steer the final judging process.',
+      },
+      {
+        heading: 'User-Centered Facilitation',
+        body: 'Facilitated engaging design thinking sessions with end users to make sure we were designing with and for them.',
+      },
+    ],
+    highlights: [
+      "Scouted three of the top five winners of OpenIDEO's Bridge Builder Challenge.",
+      'Worked on 10+ challenges with successive contract renewals with OpenIDEO.',
+    ],
+    skills: ['Community Management', 'Design Thinking', 'Design Research', 'Startup Scouting'],
+  },
+  {
     tag: 'Community Strategy',
     title: 'Global Developer Community Relaunch',
     summary: 'Rebuilt a fragmented developer community into one connected hub with clear rituals, roles, and recognition for 25,000+ members.',
