@@ -354,33 +354,27 @@ button, input, textarea { font-family: inherit; font-size: inherit; }
   flex: 0 0 auto;
   width: 82%;
   scroll-snap-align: start;
-  background: none;
+  background: var(--snow);
   border: none;
-  padding: 0;
+  padding: 28px;
   margin: 0;
   text-align: left;
   font: inherit;
   color: inherit;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(1, 22, 39, 0.1);
 }
 
 .card:focus-visible {
   outline: 2px solid var(--rose);
   outline-offset: 6px;
 }
-
-.card-image {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: 8px;
-  background: var(--snow);
-  margin-bottom: 20px;
-  transition: transform 0.3s ease;
-}
-
-.card:hover .card-image { transform: translateY(-4px); }
 
 .card-tag {
   display: block;
@@ -390,6 +384,22 @@ button, input, textarea { font-family: inherit; font-size: inherit; }
   text-transform: uppercase;
   color: var(--grey);
   margin-bottom: 8px;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.card-tag-pill {
+  background: var(--white);
+  color: var(--ink);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
 }
 
 .card-title {

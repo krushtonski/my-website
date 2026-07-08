@@ -187,20 +187,15 @@ caseStudies.forEach((study, index) => {
   card.setAttribute('role', 'listitem');
   card.setAttribute('aria-label', `View case study: ${study.title}`);
 
-  const img = document.createElement('img');
-  img.src = study.image;
-  img.alt = '';
-  img.className = 'card-image';
-
   const content = document.createElement('div');
   content.className = 'card-content';
+  const tagsHtml = study.skills.map((skill) => `<span class="card-tag-pill">${skill}</span>`).join('');
   content.innerHTML = `
-    <span class="card-tag">${study.tag}</span>
+    <div class="card-tags">${tagsHtml}</div>
     <h3 class="card-title">${study.title}</h3>
     <p class="card-desc">${study.summary}</p>
   `;
 
-  card.appendChild(img);
   card.appendChild(content);
   card.addEventListener('click', () => openCaseStudy(index));
   track.appendChild(card);
