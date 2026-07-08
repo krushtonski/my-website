@@ -36,14 +36,42 @@ if (animateTargets.length && 'IntersectionObserver' in window) {
 const caseStudies = [
   {
     tag: 'Community Strategy',
+    title: 'Explorers Community at Hilti',
+    image: 'images/case-6.svg',
+    summary: 'Grew and diversified Hilti’s internal "Explorers" research community, driving product changes that lifted NPS by a third.',
+    sections: [
+      {
+        heading: 'Managing the "Explorers" Community',
+        body: 'I managed an internal community of employees for testing and feedback. Working with Product Owners, I identified research questions, then planned and carried out mixed-method research using triangulation. I led this alongside volunteer researchers, later presenting scored pain points to the Product Owners and external companies to help prioritise the product backlog. I also led a company-wide survey to benchmark HR tools against other internal software.',
+      },
+      {
+        heading: 'Creating Inclusive Materials',
+        body: 'I developed training and communications materials for the whole company, from software updates to new HR services. These were templatised and multi-format to ensure they were accessible to everyone.',
+      },
+      {
+        heading: 'Embedding a Research Mindset',
+        body: 'To help build an internal research culture, I planned and delivered training for my colleagues. I led workshops on user research, design thinking, and ideation, giving the HR team the tools to run their own sessions and improve their internal processes.',
+      },
+    ],
+    highlights: [
+      'Designed and led over 20 user research projects. These insights directly influenced roadmap decisions and led to the implementation of >10 product changes, contributing to a one-third increase in the overall NPS.',
+      'Translated four major software releases into user-friendly training materials and guides, ensuring complex updates were digestible for a global workforce.',
+      'Established robust acceptance criteria for tech products and set ambitious KPIs for user research and community engagement.',
+      'Grew the "Explorers" community by 20% and improved representation across Hilti’s diverse geography, job roles, and experience levels to ensure more accurate and inclusive findings.',
+    ],
+    skills: ['Community Strategy', 'Community Management', 'Workshop Planning', 'User Research', 'Design Thinking'],
+  },
+  {
+    tag: 'Community Strategy',
     title: 'Global Developer Community Relaunch',
     image: 'images/case-1.svg',
     summary: 'Rebuilt a fragmented developer community into one connected hub with clear rituals, roles, and recognition for 25,000+ members.',
-    role: 'Community Strategy Lead',
-    timeline: '9 months',
-    challenge: 'Members were scattered across five unmoderated channels with no shared identity, and engagement had been declining for over a year.',
-    approach: 'Ran member interviews and channel audits, then consolidated everything into a single platform with a clear onboarding path, contributor tiers, and monthly rituals like AMAs and show-and-tell threads.',
-    outcome: 'Active weekly participation grew 3x within two quarters, and a volunteer moderator program now handles day-to-day support.',
+    sections: [
+      { heading: 'Challenge', body: 'Members were scattered across five unmoderated channels with no shared identity, and engagement had been declining for over a year.' },
+      { heading: 'Approach', body: 'Ran member interviews and channel audits, then consolidated everything into a single platform with a clear onboarding path, contributor tiers, and monthly rituals like AMAs and show-and-tell threads.' },
+      { heading: 'Outcome', body: 'Active weekly participation grew 3x within two quarters, and a volunteer moderator program now handles day-to-day support.' },
+    ],
+    highlights: [],
     skills: ['Community Strategy', 'Stakeholder Interviews', 'Platform Migration', 'Program Design'],
   },
   {
@@ -51,11 +79,12 @@ const caseStudies = [
     title: 'Open Innovation Challenge Platform',
     image: 'images/case-2.svg',
     summary: 'Designed and ran a company-wide open innovation program that turned employee and customer ideas into 12 shipped product features.',
-    role: 'Open Innovation Program Lead',
-    timeline: 'Ongoing since 2023',
-    challenge: 'Good ideas from customers and staff had no clear route to the product team, so most went nowhere.',
-    approach: 'Built a lightweight submission-to-shipping pipeline: a public idea board, quarterly challenge themes, a review panel, and a feedback loop back to every submitter.',
-    outcome: 'Over 400 ideas were submitted in the first year, 12 shipped as product features, and submitter satisfaction with the process sits above 90%.',
+    sections: [
+      { heading: 'Challenge', body: 'Good ideas from customers and staff had no clear route to the product team, so most went nowhere.' },
+      { heading: 'Approach', body: 'Built a lightweight submission-to-shipping pipeline: a public idea board, quarterly challenge themes, a review panel, and a feedback loop back to every submitter.' },
+      { heading: 'Outcome', body: 'Over 400 ideas were submitted in the first year, 12 shipped as product features, and submitter satisfaction with the process sits above 90%.' },
+    ],
+    highlights: [],
     skills: ['Open Innovation', 'Program Design', 'Cross-team Facilitation', 'Idea Evaluation'],
   },
   {
@@ -63,11 +92,12 @@ const caseStudies = [
     title: 'New Member Onboarding Redesign',
     image: 'images/case-3.svg',
     summary: 'Led research and redesign of new-member onboarding, cutting first-week drop-off by 40%.',
-    role: 'UX Researcher & Designer',
-    timeline: '3 months',
-    challenge: 'Nearly half of new community members went silent after their first week, and exit surveys pointed to a confusing, text-heavy onboarding flow.',
-    approach: 'Ran usability tests on the existing flow, mapped the drop-off points, then redesigned onboarding around three short guided steps with a clear first action for every new member.',
-    outcome: 'First-week drop-off fell by 40%, and new members now complete their first meaningful action within an average of 6 minutes.',
+    sections: [
+      { heading: 'Challenge', body: 'Nearly half of new community members went silent after their first week, and exit surveys pointed to a confusing, text-heavy onboarding flow.' },
+      { heading: 'Approach', body: 'Ran usability tests on the existing flow, mapped the drop-off points, then redesigned onboarding around three short guided steps with a clear first action for every new member.' },
+      { heading: 'Outcome', body: 'First-week drop-off fell by 40%, and new members now complete their first meaningful action within an average of 6 minutes.' },
+    ],
+    highlights: [],
     skills: ['UX Research', 'Usability Testing', 'Flow Design', 'Onboarding'],
   },
   {
@@ -75,11 +105,12 @@ const caseStudies = [
     title: 'AI Feature Beta Community',
     image: 'images/case-4.svg',
     summary: 'Built and moderated an early-access community that shaped the rollout of a new AI assistant feature.',
-    role: 'Community Lead, Beta Program',
-    timeline: '6 months',
-    challenge: 'The product team needed fast, structured feedback on a new AI assistant before general release, without flooding support channels.',
-    approach: 'Recruited and onboarded 200 beta testers, set up structured feedback templates and weekly office hours, and triaged findings directly into the product backlog.',
-    outcome: 'Feedback from the beta community drove 18 pre-launch fixes and became the template now used for every subsequent AI feature rollout.',
+    sections: [
+      { heading: 'Challenge', body: 'The product team needed fast, structured feedback on a new AI assistant before general release, without flooding support channels.' },
+      { heading: 'Approach', body: 'Recruited and onboarded 200 beta testers, set up structured feedback templates and weekly office hours, and triaged findings directly into the product backlog.' },
+      { heading: 'Outcome', body: 'Feedback from the beta community drove 18 pre-launch fixes and became the template now used for every subsequent AI feature rollout.' },
+    ],
+    highlights: [],
     skills: ['Beta Program Management', 'AI Products', 'Community Moderation', 'Feedback Synthesis'],
   },
   {
@@ -87,11 +118,12 @@ const caseStudies = [
     title: 'Trust & Safety Playbook',
     image: 'images/case-5.svg',
     summary: 'Created moderation guidelines and a triage workflow that cut harmful-content response time from 48 hours to under 4.',
-    role: 'Community Moderation Lead',
-    timeline: '4 months',
-    challenge: 'Moderation was inconsistent and reactive, handled ad hoc by whoever was online, with no shared standards.',
-    approach: 'Wrote a public community guidelines document, built a severity-based triage workflow, and trained a rotating team of volunteer moderators against it.',
-    outcome: 'Average response time to harmful content dropped from 48 hours to under 4, and moderator turnover fell as expectations became clear and shared.',
+    sections: [
+      { heading: 'Challenge', body: 'Moderation was inconsistent and reactive, handled ad hoc by whoever was online, with no shared standards.' },
+      { heading: 'Approach', body: 'Wrote a public community guidelines document, built a severity-based triage workflow, and trained a rotating team of volunteer moderators against it.' },
+      { heading: 'Outcome', body: 'Average response time to harmful content dropped from 48 hours to under 4, and moderator turnover fell as expectations became clear and shared.' },
+    ],
+    highlights: [],
     skills: ['Trust & Safety', 'Moderation Guidelines', 'Process Design', 'Team Training'],
   },
 ];
@@ -108,11 +140,34 @@ function openCaseStudy(index) {
   document.getElementById('case-modal-image').alt = study.title;
   document.getElementById('case-modal-tag').textContent = study.tag;
   document.getElementById('case-modal-title').textContent = study.title;
-  document.getElementById('case-modal-role').textContent = study.role;
-  document.getElementById('case-modal-timeline').textContent = study.timeline;
-  document.getElementById('case-modal-challenge').textContent = study.challenge;
-  document.getElementById('case-modal-approach').textContent = study.approach;
-  document.getElementById('case-modal-outcome').textContent = study.outcome;
+
+  const sectionsWrap = document.getElementById('case-modal-sections');
+  sectionsWrap.innerHTML = '';
+  study.sections.forEach((section) => {
+    const div = document.createElement('div');
+    div.className = 'case-modal-section';
+    const h4 = document.createElement('h4');
+    h4.textContent = section.heading;
+    const p = document.createElement('p');
+    p.textContent = section.body;
+    div.appendChild(h4);
+    div.appendChild(p);
+    sectionsWrap.appendChild(div);
+  });
+
+  const highlightsWrap = document.getElementById('case-modal-highlights-wrap');
+  const highlightsList = document.getElementById('case-modal-highlights');
+  highlightsList.innerHTML = '';
+  if (study.highlights && study.highlights.length) {
+    highlightsWrap.hidden = false;
+    study.highlights.forEach((highlight) => {
+      const li = document.createElement('li');
+      li.textContent = highlight;
+      highlightsList.appendChild(li);
+    });
+  } else {
+    highlightsWrap.hidden = true;
+  }
 
   const skillsList = document.getElementById('case-modal-skills');
   skillsList.innerHTML = '';

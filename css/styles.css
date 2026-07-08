@@ -467,22 +467,7 @@ button, input, textarea { font-family: inherit; font-size: inherit; }
   margin: 8px 0 20px;
 }
 
-.case-modal-meta {
-  display: flex;
-  gap: 32px;
-  margin-bottom: 24px;
-}
-
-.case-modal-meta dt {
-  font-size: 0.72rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--grey);
-  margin-bottom: 4px;
-}
-
-.case-modal-meta dd { font-weight: 600; }
+.case-modal-sections { margin-top: 20px; }
 
 .case-modal-section { margin-bottom: 18px; }
 
@@ -495,6 +480,42 @@ button, input, textarea { font-family: inherit; font-size: inherit; }
 .case-modal-section p {
   color: var(--ink);
   font-size: 0.95rem;
+}
+
+.case-modal-highlights-wrap {
+  margin-bottom: 18px;
+}
+
+.case-modal-highlights-wrap h4 {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.case-modal-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}
+
+.case-modal-highlights li {
+  position: relative;
+  padding-left: 20px;
+  color: var(--ink);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.case-modal-highlights li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--rose);
 }
 
 .case-modal-skills {
