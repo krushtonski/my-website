@@ -85,6 +85,7 @@ const caseStudies = [
       'The community became self-sustaining, shifting from incentivized referrals to purely organic growth driven by genuine member loyalty.',
     ],
     skills: ['Community Strategy', 'Community Management', 'Project Management'],
+    tools: ['Figma', 'Facebook Groups', 'Facebook', 'Instagram'],
   },
   {
     tag: 'Design Research',
@@ -109,6 +110,7 @@ const caseStudies = [
       'Worked on 10+ challenges with successive contract renewals with OpenIDEO.',
     ],
     skills: ['Community Management', 'Design Thinking', 'Design Research', 'Startup Scouting'],
+    tools: ['Adobe Creative Suite', 'Figma', 'Google Suite'],
   },
   {
     tag: 'Project Management',
@@ -128,6 +130,7 @@ const caseStudies = [
       'Developed and launched multiple global challenges for Red Bull Mind Gamers, with content featured across local Red Bull social media channels.',
     ],
     skills: ['Micro-Learning', 'Project Management', 'Challenges'],
+    tools: ['Google Suite', 'Figma', 'Adobe'],
   },
   {
     tag: 'Workshops',
