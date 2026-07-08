@@ -560,20 +560,28 @@ button, input, textarea { font-family: inherit; font-size: inherit; }
   max-width: 480px;
 }
 
-.contact-details {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.contact-item {
-  display: flex;
+.btn-download-cv {
+  display: inline-flex;
   align-items: center;
   gap: 10px;
+  width: fit-content;
+  border: 1.5px solid var(--ink);
+  color: var(--ink);
+  background: transparent;
+  padding: 12px 22px;
+  border-radius: 8px;
   font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-.contact-item svg { color: var(--rose); flex-shrink: 0; }
+.btn-download-cv svg { flex-shrink: 0; }
+
+.btn-download-cv:hover,
+.btn-download-cv:focus-visible {
+  background: var(--ink);
+  color: var(--white);
+}
 
 .contact-form {
   background: var(--white);
