@@ -62,6 +62,31 @@ const caseStudies = [
   },
   {
     tag: 'Community Strategy',
+    title: "Deli Club for Hellmann's",
+    summary: "Co-led a brand community from scratch at Iovia for a major Hellmann's product launch, growing from a single-country pilot into a thriving multi-region community.",
+    sections: [
+      {
+        heading: 'Strategic Seeding & Scalable Growth',
+        body: "I led the initial launch using a mix of influencers, social media ads, and brand collaborations. I benchmarked these channels to identify the most cost-effective 'sweet spot' for member acquisition. Then the growth strategy changed to organic growth through member referrals. As the community grew, we increasingly used a team of community assistants to handle operations across different territories.",
+      },
+      {
+        heading: 'Creative Direction & Engagement',
+        body: 'I was responsible for community content. This included content for user feedback through polls, small group discussions/focus groups and surveys; cooking and food competitions; topical discussions; and virtual events, which I hosted. I worked closely with an internal team of developers and designers to ensure all community assets met strict brand guidelines and technical requirements.',
+      },
+      {
+        heading: 'Systems Design & Client Relations',
+        body: 'I managed the client relationship through regular reporting and strategic updates. This included building the community framework and KPIs from scratch. As the community matured, I successfully devolved more responsibility to the community members themselves, empowering them to lead initiatives and hiring members to produce content.',
+      },
+    ],
+    highlights: [
+      'Community-generated content photography and video was an estimated 25% cheaper than content produced by traditional design agencies.',
+      'Product feedback from the community delivered the same depth of insight as external research firms in less time, and at a lower cost.',
+      'The community became self-sustaining, shifting from incentivized referrals to purely organic growth driven by genuine member loyalty.',
+    ],
+    skills: ['Community Strategy', 'Community Management', 'Project Management'],
+  },
+  {
+    tag: 'Community Strategy',
     title: 'Global Developer Community Relaunch',
     summary: 'Rebuilt a fragmented developer community into one connected hub with clear rituals, roles, and recognition for 25,000+ members.',
     sections: [
