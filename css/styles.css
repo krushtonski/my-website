@@ -354,8 +354,10 @@ button, input, textarea { font-family: inherit; font-size: inherit; }
   flex: 0 0 auto;
   width: 82%;
   scroll-snap-align: start;
-  background: var(--snow);
-  border: 1.5px solid var(--rose);
+  border: 1.5px solid transparent;
+  background-image: linear-gradient(var(--snow), var(--snow)), linear-gradient(135deg, var(--rose), var(--snow) 65%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
   padding: 28px;
   margin: 0;
   text-align: left;
