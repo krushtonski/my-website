@@ -356,8 +356,8 @@ button, input, textarea { font-family: inherit; font-size: inherit; }
   flex: 0 0 auto;
   width: 82%;
   scroll-snap-align: start;
-  border: 1.5px solid transparent;
-  background-image: linear-gradient(var(--snow), var(--snow)), linear-gradient(135deg, var(--rose), var(--snow) 65%);
+  border: 4px solid transparent;
+  background-image: linear-gradient(var(--white), var(--white)), linear-gradient(135deg, var(--grey), var(--rose));
   background-origin: border-box;
   background-clip: padding-box, border-box;
   padding: 28px;
@@ -398,7 +398,7 @@ button, input, textarea { font-family: inherit; font-size: inherit; }
 }
 
 .card-tag-pill {
-  background: var(--white);
+  background: var(--snow);
   color: var(--ink);
   font-size: 0.7rem;
   font-weight: 600;
