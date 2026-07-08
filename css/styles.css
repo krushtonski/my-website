@@ -520,6 +520,18 @@ button, input, textarea { font-family: inherit; font-size: inherit; }
   background: var(--rose);
 }
 
+.case-modal-highlights a {
+  color: var(--rose);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}
+
+.case-modal-highlights a:hover,
+.case-modal-highlights a:focus-visible {
+  opacity: 0.8;
+}
+
 .case-modal-skills {
   display: flex;
   flex-wrap: wrap;

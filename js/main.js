@@ -129,6 +129,26 @@ const caseStudies = [
     skills: ['Micro-Learning', 'Project Management', 'Challenges'],
   },
   {
+    tag: 'Workshops',
+    title: 'Workshops, Interviews & Podcasts',
+    summary: "Facilitates workshops, interviews, and panels spanning conference stages, a global innovation podcast, and user research.",
+    sections: [
+      {
+        heading: 'A Passion for Facilitation',
+        body: "I love facilitating workshops, crafting the right questions, and leading interviews, whether it's for a conference stage or deep-dive user research. I also helped to plan Kaptivate's Solver's Edge podcast series and have been interviewed on the show myself.",
+      },
+    ],
+    highlightsLabel: 'Highlights',
+    highlights: [
+      "Interviewed the winners of the Impact Award, Alganize, at the 2024 Impact Festival in Frankfurt as the Community Lead for Brighter Future, and caught up with the previous year's winners, Eeden, to discuss how the award helped them scale their business.",
+      "Featured as a guest on the <em>Solver's Edge</em> podcast to share my perspective on open innovation from a user's point of view.",
+      'Facilitated an ideation session for Kaptivate in February 2026, exploring ways to bridge the gap between high school and long-term career paths as part of #ForwardDMV.',
+      'Designed a full-day Design Thinking workshop focused on developing practical solutions for scaling apprenticeships across the DMV region.',
+      'Panelist for the Open and User Innovation Conference 2021, issued by RWTH Aachen University — Solver Panel: The Hidden Stars of Crowdsourcing. <a href="https://oui.open-innovation.com/daily-schedule/" target="_blank" rel="noopener noreferrer">View the session</a>.',
+    ],
+    skills: ['Workshops', 'Interviews', 'Research', 'Podcast'],
+  },
+  {
     tag: 'Community Strategy',
     title: 'Global Developer Community Relaunch',
     summary: 'Rebuilt a fragmented developer community into one connected hub with clear rituals, roles, and recognition for 25,000+ members.',
@@ -216,13 +236,17 @@ function openCaseStudy(index) {
   });
 
   const highlightsWrap = document.getElementById('case-modal-highlights-wrap');
+  const highlightsHeading = document.getElementById('case-modal-highlights-heading');
   const highlightsList = document.getElementById('case-modal-highlights');
   highlightsList.innerHTML = '';
   if (study.highlights && study.highlights.length) {
     highlightsWrap.hidden = false;
+    highlightsHeading.textContent = study.highlightsLabel || 'Key Measures for Success';
     study.highlights.forEach((highlight) => {
       const li = document.createElement('li');
-      li.textContent = highlight;
+      // Highlight strings are authored site content (not user input), so
+      // innerHTML is safe here and lets a highlight embed a link or italics.
+      li.innerHTML = highlight;
       highlightsList.appendChild(li);
     });
   } else {
