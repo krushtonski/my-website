@@ -37,7 +37,6 @@ const caseStudies = [
   {
     tag: 'Community Strategy',
     title: 'Explorers Community at Hilti',
-    image: 'images/case-6.svg',
     summary: 'Grew and diversified Hilti’s internal "Explorers" research community, driving product changes that lifted NPS by a third.',
     sections: [
       {
@@ -64,7 +63,6 @@ const caseStudies = [
   {
     tag: 'Community Strategy',
     title: 'Global Developer Community Relaunch',
-    image: 'images/case-1.svg',
     summary: 'Rebuilt a fragmented developer community into one connected hub with clear rituals, roles, and recognition for 25,000+ members.',
     sections: [
       { heading: 'Challenge', body: 'Members were scattered across five unmoderated channels with no shared identity, and engagement had been declining for over a year.' },
@@ -77,7 +75,6 @@ const caseStudies = [
   {
     tag: 'Open Innovation',
     title: 'Open Innovation Challenge Platform',
-    image: 'images/case-2.svg',
     summary: 'Designed and ran a company-wide open innovation program that turned employee and customer ideas into 12 shipped product features.',
     sections: [
       { heading: 'Challenge', body: 'Good ideas from customers and staff had no clear route to the product team, so most went nowhere.' },
@@ -90,7 +87,6 @@ const caseStudies = [
   {
     tag: 'UX Research',
     title: 'New Member Onboarding Redesign',
-    image: 'images/case-3.svg',
     summary: 'Led research and redesign of new-member onboarding, cutting first-week drop-off by 40%.',
     sections: [
       { heading: 'Challenge', body: 'Nearly half of new community members went silent after their first week, and exit surveys pointed to a confusing, text-heavy onboarding flow.' },
@@ -103,7 +99,6 @@ const caseStudies = [
   {
     tag: 'AI & Community',
     title: 'AI Feature Beta Community',
-    image: 'images/case-4.svg',
     summary: 'Built and moderated an early-access community that shaped the rollout of a new AI assistant feature.',
     sections: [
       { heading: 'Challenge', body: 'The product team needed fast, structured feedback on a new AI assistant before general release, without flooding support channels.' },
@@ -116,7 +111,6 @@ const caseStudies = [
   {
     tag: 'Community Moderation',
     title: 'Trust & Safety Playbook',
-    image: 'images/case-5.svg',
     summary: 'Created moderation guidelines and a triage workflow that cut harmful-content response time from 48 hours to under 4.',
     sections: [
       { heading: 'Challenge', body: 'Moderation was inconsistent and reactive, handled ad hoc by whoever was online, with no shared standards.' },
@@ -136,8 +130,6 @@ const modal = document.getElementById('case-modal');
 
 function openCaseStudy(index) {
   const study = caseStudies[index];
-  document.getElementById('case-modal-image').src = study.image;
-  document.getElementById('case-modal-image').alt = study.title;
   document.getElementById('case-modal-tag').textContent = study.tag;
   document.getElementById('case-modal-title').textContent = study.title;
 

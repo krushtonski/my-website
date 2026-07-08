@@ -459,16 +459,8 @@ button, input, textarea { font-family: inherit; font-size: inherit; }
 
 .case-modal-close:hover { background: var(--snow); }
 
-.case-modal-image {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  background: var(--snow);
-  flex-shrink: 0;
-}
-
 .case-modal-body {
-  padding: 28px 32px 32px;
+  padding: 56px 32px 32px;
   overflow-y: auto;
 }
 
