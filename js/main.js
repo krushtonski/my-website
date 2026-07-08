@@ -110,6 +110,25 @@ const caseStudies = [
     skills: ['Community Management', 'Design Thinking', 'Design Research', 'Startup Scouting'],
   },
   {
+    tag: 'Project Management',
+    title: 'Red Bull Mind Gamers',
+    summary: "Project and Challenge Manager for Red Bull Mind Gamers, launching multi-stage micro-learning challenges featured across regional Red Bull social channels worldwide.",
+    sections: [
+      {
+        heading: 'Multi-Stage Challenge Design',
+        body: "I was the Project and Challenge Manager for Red Bull Mind Gamers, creating multi-stage micro-learning challenges designed to test Gardner's mind skills (e.g., creativity and strategy). This involved creating the concept for each challenge in collaboration with partner institutions, such as the Quantum Physics Lab. Then executing an online three-stage \"micro-learning\" challenge with an introductory video, a short interactive experiment, and a final \"test\" of what they learnt.",
+      },
+      {
+        heading: 'Production & Stakeholder Management',
+        body: "My role included briefing, hiring, and managing payments for film crews, developers, designers, and special talent (such as gymnasts), and liaising with Red Bull's marketing team. I successfully launched multiple challenges for a worldwide audience, which were featured across various regional Red Bull social media channels.",
+      },
+    ],
+    highlights: [
+      'Developed and launched multiple global challenges for Red Bull Mind Gamers, with content featured across local Red Bull social media channels.',
+    ],
+    skills: ['Micro-Learning', 'Project Management', 'Challenges'],
+  },
+  {
     tag: 'Community Strategy',
     title: 'Global Developer Community Relaunch',
     summary: 'Rebuilt a fragmented developer community into one connected hub with clear rituals, roles, and recognition for 25,000+ members.',
