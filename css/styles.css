@@ -244,8 +244,31 @@ button, input, textarea { font-family: inherit; font-size: inherit; }
   animation: fade-slide-up 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Word-by-word reveal: opts an element out of the whole-block fade
+   above and animates each .word span in sequence instead. Words are
+   plain inline-block text with no base opacity change, so they stay
+   fully visible if JS never runs or the observer never fires. */
+.word-stagger.js-animate-in.in-view {
+  animation: none;
+}
+
+.word-stagger .word {
+  display: inline-block;
+}
+
+.word-stagger.in-view .word {
+  animation: fade-slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.word-stagger.in-view .word:nth-child(1) { animation-delay: 0s; }
+.word-stagger.in-view .word:nth-child(2) { animation-delay: 0.12s; }
+.word-stagger.in-view .word:nth-child(3) { animation-delay: 0.24s; }
+
 @media (prefers-reduced-motion: reduce) {
-  .js-animate-in.in-view { animation: none; }
+  .js-animate-in.in-view,
+  .word-stagger.in-view .word {
+    animation: none;
+  }
 }
 
 /* ---------- Sections ---------- */
