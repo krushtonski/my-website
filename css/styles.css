@@ -355,7 +355,7 @@ button, input, textarea { font-family: inherit; font-size: inherit; }
   width: 82%;
   scroll-snap-align: start;
   background: var(--snow);
-  border: none;
+  border: 1.5px solid var(--rose);
   padding: 28px;
   margin: 0;
   text-align: left;
