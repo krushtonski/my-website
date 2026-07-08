@@ -148,66 +148,6 @@ const caseStudies = [
     ],
     skills: ['Workshops', 'Interviews', 'Research', 'Podcast'],
   },
-  {
-    tag: 'Community Strategy',
-    title: 'Global Developer Community Relaunch',
-    summary: 'Rebuilt a fragmented developer community into one connected hub with clear rituals, roles, and recognition for 25,000+ members.',
-    sections: [
-      { heading: 'Challenge', body: 'Members were scattered across five unmoderated channels with no shared identity, and engagement had been declining for over a year.' },
-      { heading: 'Approach', body: 'Ran member interviews and channel audits, then consolidated everything into a single platform with a clear onboarding path, contributor tiers, and monthly rituals like AMAs and show-and-tell threads.' },
-      { heading: 'Outcome', body: 'Active weekly participation grew 3x within two quarters, and a volunteer moderator program now handles day-to-day support.' },
-    ],
-    highlights: [],
-    skills: ['Community Strategy', 'Stakeholder Interviews', 'Platform Migration', 'Program Design'],
-  },
-  {
-    tag: 'Open Innovation',
-    title: 'Open Innovation Challenge Platform',
-    summary: 'Designed and ran a company-wide open innovation program that turned employee and customer ideas into 12 shipped product features.',
-    sections: [
-      { heading: 'Challenge', body: 'Good ideas from customers and staff had no clear route to the product team, so most went nowhere.' },
-      { heading: 'Approach', body: 'Built a lightweight submission-to-shipping pipeline: a public idea board, quarterly challenge themes, a review panel, and a feedback loop back to every submitter.' },
-      { heading: 'Outcome', body: 'Over 400 ideas were submitted in the first year, 12 shipped as product features, and submitter satisfaction with the process sits above 90%.' },
-    ],
-    highlights: [],
-    skills: ['Open Innovation', 'Program Design', 'Cross-team Facilitation', 'Idea Evaluation'],
-  },
-  {
-    tag: 'UX Research',
-    title: 'New Member Onboarding Redesign',
-    summary: 'Led research and redesign of new-member onboarding, cutting first-week drop-off by 40%.',
-    sections: [
-      { heading: 'Challenge', body: 'Nearly half of new community members went silent after their first week, and exit surveys pointed to a confusing, text-heavy onboarding flow.' },
-      { heading: 'Approach', body: 'Ran usability tests on the existing flow, mapped the drop-off points, then redesigned onboarding around three short guided steps with a clear first action for every new member.' },
-      { heading: 'Outcome', body: 'First-week drop-off fell by 40%, and new members now complete their first meaningful action within an average of 6 minutes.' },
-    ],
-    highlights: [],
-    skills: ['UX Research', 'Usability Testing', 'Flow Design', 'Onboarding'],
-  },
-  {
-    tag: 'AI & Community',
-    title: 'AI Feature Beta Community',
-    summary: 'Built and moderated an early-access community that shaped the rollout of a new AI assistant feature.',
-    sections: [
-      { heading: 'Challenge', body: 'The product team needed fast, structured feedback on a new AI assistant before general release, without flooding support channels.' },
-      { heading: 'Approach', body: 'Recruited and onboarded 200 beta testers, set up structured feedback templates and weekly office hours, and triaged findings directly into the product backlog.' },
-      { heading: 'Outcome', body: 'Feedback from the beta community drove 18 pre-launch fixes and became the template now used for every subsequent AI feature rollout.' },
-    ],
-    highlights: [],
-    skills: ['Beta Program Management', 'AI Products', 'Community Moderation', 'Feedback Synthesis'],
-  },
-  {
-    tag: 'Community Moderation',
-    title: 'Trust & Safety Playbook',
-    summary: 'Created moderation guidelines and a triage workflow that cut harmful-content response time from 48 hours to under 4.',
-    sections: [
-      { heading: 'Challenge', body: 'Moderation was inconsistent and reactive, handled ad hoc by whoever was online, with no shared standards.' },
-      { heading: 'Approach', body: 'Wrote a public community guidelines document, built a severity-based triage workflow, and trained a rotating team of volunteer moderators against it.' },
-      { heading: 'Outcome', body: 'Average response time to harmful content dropped from 48 hours to under 4, and moderator turnover fell as expectations became clear and shared.' },
-    ],
-    highlights: [],
-    skills: ['Trust & Safety', 'Moderation Guidelines', 'Process Design', 'Team Training'],
-  },
 ];
 
 const track = document.getElementById('carousel-track');
