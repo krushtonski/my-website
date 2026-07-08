@@ -191,8 +191,8 @@ caseStudies.forEach((study, index) => {
   content.className = 'card-content';
   const tagsHtml = study.skills.map((skill) => `<span class="card-tag-pill">${skill}</span>`).join('');
   content.innerHTML = `
-    <div class="card-tags">${tagsHtml}</div>
     <h3 class="card-title">${study.title}</h3>
+    <div class="card-tags">${tagsHtml}</div>
     <p class="card-desc">${study.summary}</p>
   `;
 
