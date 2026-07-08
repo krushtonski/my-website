@@ -549,6 +549,16 @@ button, input, textarea { font-family: inherit; font-size: inherit; }
   border-radius: 999px;
 }
 
+.case-modal-tools-wrap {
+  margin-top: 20px;
+}
+
+.case-modal-tools-wrap h4 {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
 /* ---------- Contact ---------- */
 .contact-section { background: var(--white); }
 

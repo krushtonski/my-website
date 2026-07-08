@@ -59,6 +59,7 @@ const caseStudies = [
       'Grew the "Explorers" community by 20% and improved representation across Hilti’s diverse geography, job roles, and experience levels to ensure more accurate and inclusive findings.',
     ],
     skills: ['Community Strategy', 'Community Management', 'Workshop Planning', 'User Research', 'Design Thinking'],
+    tools: ['Microsoft Packages', 'Workday', 'ServiceNow', 'Figma', 'Mural', 'Miro', 'TalentLMS', 'Snagit'],
   },
   {
     tag: 'Community Strategy',
@@ -200,6 +201,20 @@ function openCaseStudy(index) {
     li.textContent = skill;
     skillsList.appendChild(li);
   });
+
+  const toolsWrap = document.getElementById('case-modal-tools-wrap');
+  const toolsList = document.getElementById('case-modal-tools');
+  toolsList.innerHTML = '';
+  if (study.tools && study.tools.length) {
+    toolsWrap.hidden = false;
+    study.tools.forEach((tool) => {
+      const li = document.createElement('li');
+      li.textContent = tool;
+      toolsList.appendChild(li);
+    });
+  } else {
+    toolsWrap.hidden = true;
+  }
 
   modal.showModal();
 }
