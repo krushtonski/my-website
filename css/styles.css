@@ -390,7 +390,7 @@ button, input, textarea { font-family: inherit; font-size: inherit; }
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-bottom: 16px;
+  margin-top: 16px;
 }
 
 .card-tag-pill {
