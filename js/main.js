@@ -152,6 +152,9 @@ const caseStudies = [
     ],
     skills: ['Workshops', 'Interviews', 'Research', 'Podcast'],
   },
+];
+
+const aiProjects = [
   {
     tag: 'Creating AI Agents',
     title: 'Daily Morning Brief',
@@ -182,14 +185,9 @@ const caseStudies = [
   },
 ];
 
-const track = document.getElementById('carousel-track');
-const dotsWrap = document.getElementById('carousel-dots');
-const prevBtn = document.getElementById('carousel-prev');
-const nextBtn = document.getElementById('carousel-next');
 const modal = document.getElementById('case-modal');
 
-function openCaseStudy(index) {
-  const study = caseStudies[index];
+function openCaseStudy(study) {
   document.getElementById('case-modal-tag').textContent = study.tag;
   document.getElementById('case-modal-title').textContent = study.title;
 
@@ -250,72 +248,82 @@ function openCaseStudy(index) {
   modal.showModal();
 }
 
-caseStudies.forEach((study, index) => {
-  const card = document.createElement('button');
-  card.type = 'button';
-  card.className = 'card';
-  card.setAttribute('role', 'listitem');
-  card.setAttribute('aria-label', `View case study: ${study.title}`);
+function initCarousel(studies, trackId, dotsId, prevId, nextId, itemLabel) {
+  const track = document.getElementById(trackId);
+  const dotsWrap = document.getElementById(dotsId);
+  const prevBtn = document.getElementById(prevId);
+  const nextBtn = document.getElementById(nextId);
 
-  const content = document.createElement('div');
-  content.className = 'card-content';
-  const tagsHtml = study.skills.map((skill) => `<span class="card-tag-pill">${skill}</span>`).join('');
-  content.innerHTML = `
-    <h3 class="card-title">${study.title}</h3>
-    <p class="card-desc">${study.summary}</p>
-    <div class="card-tags">${tagsHtml}</div>
-  `;
+  studies.forEach((study, index) => {
+    const card = document.createElement('button');
+    card.type = 'button';
+    card.className = 'card';
+    card.setAttribute('role', 'listitem');
+    card.setAttribute('aria-label', `View ${itemLabel}: ${study.title}`);
 
-  card.appendChild(content);
-  card.addEventListener('click', () => openCaseStudy(index));
-  track.appendChild(card);
+    const content = document.createElement('div');
+    content.className = 'card-content';
+    const tagsHtml = study.skills.map((skill) => `<span class="card-tag-pill">${skill}</span>`).join('');
+    content.innerHTML = `
+      <h3 class="card-title">${study.title}</h3>
+      <p class="card-desc">${study.summary}</p>
+      <div class="card-tags">${tagsHtml}</div>
+    `;
 
-  const dot = document.createElement('button');
-  dot.type = 'button';
-  dot.className = 'carousel-dot';
-  dot.setAttribute('aria-label', `Go to case study ${index + 1}`);
-  dot.addEventListener('click', () => scrollToCard(index));
-  dotsWrap.appendChild(dot);
-});
+    card.appendChild(content);
+    card.addEventListener('click', () => openCaseStudy(study));
+    track.appendChild(card);
 
-const dots = Array.from(dotsWrap.children);
-
-function scrollToCard(index) {
-  const card = track.children[index];
-  if (card) {
-    track.scrollTo({ left: card.offsetLeft - track.offsetLeft, behavior: 'smooth' });
-  }
-}
-
-function updateActiveDot() {
-  const trackRect = track.getBoundingClientRect();
-  let closestIndex = 0;
-  let closestDist = Infinity;
-  Array.from(track.children).forEach((card, i) => {
-    const dist = Math.abs(card.getBoundingClientRect().left - trackRect.left);
-    if (dist < closestDist) {
-      closestDist = dist;
-      closestIndex = i;
-    }
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'carousel-dot';
+    dot.setAttribute('aria-label', `Go to ${itemLabel} ${index + 1}`);
+    dot.addEventListener('click', () => scrollToCard(index));
+    dotsWrap.appendChild(dot);
   });
-  dots.forEach((dot, i) => dot.classList.toggle('active', i === closestIndex));
+
+  const dots = Array.from(dotsWrap.children);
+
+  function scrollToCard(index) {
+    const card = track.children[index];
+    if (card) {
+      track.scrollTo({ left: card.offsetLeft - track.offsetLeft, behavior: 'smooth' });
+    }
+  }
+
+  function updateActiveDot() {
+    const trackRect = track.getBoundingClientRect();
+    let closestIndex = 0;
+    let closestDist = Infinity;
+    Array.from(track.children).forEach((card, i) => {
+      const dist = Math.abs(card.getBoundingClientRect().left - trackRect.left);
+      if (dist < closestDist) {
+        closestDist = dist;
+        closestIndex = i;
+      }
+    });
+    dots.forEach((dot, i) => dot.classList.toggle('active', i === closestIndex));
+  }
+
+  let scrollTimeout;
+  track.addEventListener('scroll', () => {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(updateActiveDot, 100);
+  });
+
+  prevBtn.addEventListener('click', () => {
+    track.scrollBy({ left: -track.clientWidth * 0.85, behavior: 'smooth' });
+  });
+
+  nextBtn.addEventListener('click', () => {
+    track.scrollBy({ left: track.clientWidth * 0.85, behavior: 'smooth' });
+  });
+
+  updateActiveDot();
 }
 
-let scrollTimeout;
-track.addEventListener('scroll', () => {
-  clearTimeout(scrollTimeout);
-  scrollTimeout = setTimeout(updateActiveDot, 100);
-});
-
-prevBtn.addEventListener('click', () => {
-  track.scrollBy({ left: -track.clientWidth * 0.85, behavior: 'smooth' });
-});
-
-nextBtn.addEventListener('click', () => {
-  track.scrollBy({ left: track.clientWidth * 0.85, behavior: 'smooth' });
-});
-
-updateActiveDot();
+initCarousel(caseStudies, 'carousel-track', 'carousel-dots', 'carousel-prev', 'carousel-next', 'case study');
+initCarousel(aiProjects, 'ai-carousel-track', 'ai-carousel-dots', 'ai-carousel-prev', 'ai-carousel-next', 'AI project');
 
 document.getElementById('case-modal-close').addEventListener('click', () => modal.close());
 modal.addEventListener('click', (e) => {
