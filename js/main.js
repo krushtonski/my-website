@@ -152,6 +152,34 @@ const caseStudies = [
     ],
     skills: ['Workshops', 'Interviews', 'Research', 'Podcast'],
   },
+  {
+    tag: 'Creating AI Agents',
+    title: 'Daily Morning Brief',
+    summary: 'Built an AI agent that delivers a daily digest of meetings, priority tasks, job matches, and networking opportunities straight to my inbox.',
+    sections: [
+      {
+        heading: 'A Daily AI-Powered Digest',
+        body: "A daily 'to do' email and digest in Claude that tells me my meetings for the day; top three tasks for the day and week pulling from my Notion board; jobs to apply for, with a percentage match based on my CV, plus a flag if any LinkedIn connections work there (jobs found on Google, LinkedIn, Indeed, and niche community sites); and one relevant LinkedIn post to comment on for the day. There is also the option to upvote/downvote matches based on suitability and to mark tasks as done.",
+      },
+    ],
+    highlights: [],
+    skills: ['Creating AI Agents'],
+    tools: ['Claude Code', 'Notion'],
+  },
+  {
+    tag: 'Vibecoding',
+    title: 'This Website',
+    summary: 'Designed and built this portfolio site with Claude Code, prompting carefully to keep it on-brand and human, not generic "AI slop".',
+    sections: [
+      {
+        heading: 'Building With Claude Code',
+        body: "I created this website using Claude Code and hosted on GitHub with a domain from Porkbun. I used prompts to make sure it did not look like a vibe code site. I hope it worked!",
+      },
+    ],
+    highlights: [],
+    skills: ['Vibecoding'],
+    tools: ['Claude Code', 'GitHub', 'Porkbun'],
+  },
 ];
 
 const track = document.getElementById('carousel-track');
