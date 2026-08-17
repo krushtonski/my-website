@@ -179,7 +179,10 @@ const aiProjects = [
         body: "I created this website using Claude Code and hosted on GitHub with a domain from Porkbun. I used prompts to make sure it did not look like a vibe code site. I hope it worked!",
       },
     ],
-    highlights: [],
+    highlightsLabel: 'Source Code',
+    highlights: [
+      '<a href="https://github.com/krushtonski/my-website" target="_blank" rel="noopener noreferrer">View the repo on GitHub</a>',
+    ],
     skills: ['Vibecoding'],
     tools: ['Claude Code', 'GitHub', 'Porkbun'],
   },
