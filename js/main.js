@@ -186,6 +186,20 @@ const aiProjects = [
     skills: ['Vibecoding'],
     tools: ['Claude Code', 'GitHub', 'Porkbun'],
   },
+    {
+    tag: 'AI-Assisted Matching',
+    title: 'Matching Mentors & Mentees',
+    summary: 'Used Claude to match mentors with startups for an accelerator program, weighing challenges, availability, and industry fit, then refined the results by hand.',
+    sections: [
+      {
+        heading: 'Matching With Claude',
+        body: "Used Claude to match mentors with startups for an accelerator program, weighing challenges, availability, and industry fit, then refined the results by hand.",
+      },
+    ],
+    highlights: [],
+    skills: ['AI-Assisted Matching'],
+    tools: ['Claude'],
+  },
 ];
 
 const modal = document.getElementById('case-modal');
