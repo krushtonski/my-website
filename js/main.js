@@ -172,11 +172,11 @@ const aiProjects = [
   {
     tag: 'Vibecoding',
     title: 'This Website',
-    summary: 'Designed and built this portfolio site with Claude Code, prompting carefully to keep it on-brand and human, not generic "AI slop".',
+    summary: 'Designed and built this portfolio site with Claude, prompting carefully to keep it on-brand and human, not generic "AI slop".',
     sections: [
       {
         heading: 'Building With Claude Code',
-        body: "I created this website using Claude Code and hosted on GitHub with a domain from Porkbun. I used prompts to make sure it did not look like a vibe code site. I hope it worked!",
+        body: "I created this website using Claude and hosted on GitHub with a domain from Porkbun. I used prompts to make sure it did not look like a vibe code site. I hope it worked!",
       },
     ],
     highlightsLabel: 'Source Code',
@@ -184,7 +184,7 @@ const aiProjects = [
       '<a href="https://github.com/krushtonski/my-website" target="_blank" rel="noopener noreferrer">View the repo on GitHub</a>',
     ],
     skills: ['Vibecoding'],
-    tools: ['Claude Code', 'GitHub', 'Porkbun'],
+    tools: ['Claude', 'GitHub', 'Porkbun'],
   },
     {
     tag: 'AI-Assisted Matching',
