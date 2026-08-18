@@ -542,6 +542,13 @@ button, input, textarea { font-family: inherit; font-size: inherit; }
 .case-modal-highlights--single li::before {
   content: none;
 }
+.case-modal-highlights--single li {
+  padding-left: 0;
+}
+
+.case-modal-highlights--single li::before {
+  content: none;
+}
 
 .case-modal-skills {
   display: flex;
