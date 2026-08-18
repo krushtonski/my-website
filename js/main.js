@@ -167,7 +167,7 @@ const aiProjects = [
     ],
     highlights: [],
     skills: ['Creating AI Agents'],
-    tools: ['Claude Code', 'Notion'],
+    tools: ['Claude', 'Notion'],
   },
   {
     tag: 'Vibecoding',
