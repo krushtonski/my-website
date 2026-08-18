@@ -196,7 +196,10 @@ const aiProjects = [
         body: "Used Claude to match mentors with startups for an accelerator program, weighing challenges, availability, and industry fit, then refined the results by hand.",
       },
     ],
-    highlights: [],
+    highlightsLabel: 'Case Study',
+    highlights: [
+      '<a href="Case%20Study_%20AI-Assisted%20Mentor%E2%80%93Startup%20Matching.pdf" target="_blank" rel="noopener noreferrer">Read the full case study (PDF)</a>',
+    ],
     skills: ['AI-Assisted Matching'],
     tools: ['Claude'],
   },
