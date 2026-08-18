@@ -166,7 +166,7 @@ const aiProjects = [
       },
     ],
     highlights: [],
-    skills: ['Creating AI Agents'],
+    skills: ['AI Agents'],
     tools: ['Claude', 'Notion'],
   },
   {
